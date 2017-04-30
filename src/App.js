@@ -17,8 +17,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BarChart width={150} height={40} data={data}>
+        <BarChart width={200} height={200} data={data} layout="vertical">
           <Bar dataKey="uv" fill="#8884d8" />
+          <XAxis type="number" dataKey="uv" />
+          <YAxis type="category" dataKey="name" />
         </BarChart>
       </div>
     );
